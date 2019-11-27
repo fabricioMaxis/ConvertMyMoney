@@ -5,12 +5,13 @@ const port = process.env.Port || 3000
 
 const convert = require('./lib/convert')
 const apiBCB = require('./lib/api.bcb')
+
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, "views"))
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/',async(req, res) => {
-    const cotacao =await apiBCB.getCotacao()
+app.get('/', async (req, res) => {
+    const cotacao = await apiBCB.getCotacao()
     res.render('home', {
         cotacao
     })
