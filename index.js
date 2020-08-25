@@ -2,7 +2,7 @@ const express = require('express')
 const app =express()
 const path = require('path')
 const port = process.env.Port || 3000
-
+/*teste*/
 const convert = require('./lib/convert')
 const apiBCB = require('./lib/api.bcb')
 
